@@ -31,7 +31,7 @@
         .badge-eth { border-color: rgba(139,92,246,0.3); }
         .intro { max-width: 650px; margin: 0 auto; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; }
         .section-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 24px; padding-top: 60px; }
-        .projects { display: flex; flex-direction: column; gap: 16px; }
+        .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
         .project-card { display: block; padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden; }
         .project-card:hover { border-color: var(--accent-blue); background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,158,255,0.06); }
         .project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; border-radius: 3px 0 0 3px; opacity: 0; transition: opacity 0.3s; }
@@ -69,7 +69,7 @@
         .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--text-primary); }
         .footer-note { font-size: 0.78rem; color: var(--text-muted); }
-        @media (max-width: 600px) { header { padding: 50px 0 40px; } h1 { font-size: 1.7rem; } .project-card { padding: 20px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .projects { grid-template-columns: 1fr; } header { padding: 50px 0 40px; } h1 { font-size: 1.7rem; } .project-card { padding: 20px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 <body>
