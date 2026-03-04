@@ -214,7 +214,7 @@ h3 {
 .badge-eth { border-color: rgba(139,92,246,0.3); }
 .badge-eth:hover { border-color: var(--accent-purple); }
 .badge-email { border-color: rgba(56,189,248,0.3); }
-.badge-email:hover { border-color: var(--accent); }
+.badge-email:hover { border-color: var(--accent-teal); }
 
 /* SECTION TITLES */
 .section-title {
