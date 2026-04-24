@@ -318,41 +318,14 @@ h3 {
 }
 
 .project-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
     color: var(--text-muted);
-    font-size: 0.95rem;
-    transition: all 0.3s;
-}
-
-.arrow-line {
-    width: 18px;
-    height: 1px;
-    background: currentColor;
-    opacity: 0.65;
-    transition: all 0.3s;
-}
-
-.arrow-head {
-    font-size: 1rem;
-    line-height: 1;
-    transform: translateY(-1px);
+    font-size: 1.1rem;
     transition: all 0.3s;
 }
 
 .project-card:hover .project-arrow {
     color: var(--accent-blue);
     transform: translateX(4px);
-}
-
-.project-card:hover .arrow-line {
-    width: 24px;
-    opacity: 1;
-}
-
-.project-card:hover .arrow-head {
-    transform: translate(1px, -2px);
 }
 
 .project-desc {
