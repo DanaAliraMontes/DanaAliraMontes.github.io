@@ -816,3 +816,8 @@ footer {
 .cta-actions .cta-button-secondary {
     background: rgba(255,255,255,0.02);
 }
+
+
+.how-it-works-grid {
+    margin-top: 8px;
+}
