@@ -821,3 +821,29 @@ footer {
 .how-it-works-grid {
     margin-top: 8px;
 }
+
+
+.services-hero {
+    padding-bottom: 18px;
+}
+
+.services-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.fit-card-good {
+    border-color: rgba(45,212,191,0.22);
+}
+
+.fit-card-not {
+    border-color: rgba(244,63,94,0.18);
+}
+
+@media (max-width: 900px) {
+    .services-fit-grid {
+        grid-template-columns: 1fr;
+    }
+}
