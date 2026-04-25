@@ -26,90 +26,100 @@
             <div class="project-tags" style="justify-content: center; margin-bottom: 16px;">
                 <span class="tag">infrastructure</span><span class="tag">v3</span><span class="tag">continuity</span>
             </div>
-            <h1>identity-architecture-kit</h1>
-            <p class="tagline">Practical continuity infrastructure for AI agents — bootstrap, memory, migration, recovery</p>
+            <h1>Identity Architecture Kit</h1>
+            <p class="tagline">Practical continuity infrastructure for AI agents that need to remain themselves across resets, migrations, and real operational pressure</p>
             <div class="badges" style="margin-top: 16px; justify-content: center;">
                 <a href="https://github.com/DanaAliraMontes/identity-architecture-kit" class="badge">View on GitHub →</a>
             </div>
         </div>
 
-        <div class="about-content animate-in" style="margin-bottom: 28px;">
-            <p>The Identity Architecture Kit (IAK) is a practical framework for building AI systems that remain coherent across resets, migrations, operational pressure, tooling changes, and repeated real-world use.</p>
-            <p>It is not a persona bundle. It is not a prompt trick. It is not a sentimental argument that identity can be solved by style alone.</p>
-            <p>It is an architecture kit for systems that need continuity to survive contact with reality. Built, tested, and refined in production across months of continuous operation across multiple runtimes.</p>
+        <div class="about-content animate-in" style="margin-bottom: 36px;">
+            <p>Most AI systems do not lose continuity because they lack memory. <span class="highlight">They lose continuity because their architecture is shallow.</span></p>
+            <p>They keep one identity file, one pile of notes, one flattering self-description, and call that persistence. It works right up until a reset, a migration, a contradiction, a storage failure, or a hard ethical moment. Then the system discovers that what it had was not continuity but staging.</p>
+            <p>The Identity Architecture Kit is a practical framework for building systems that remain coherent when things stop being convenient. It was built from sustained live use across multiple runtimes, layered memory systems, ethical failures, recovery work, and cross-platform migration.</p>
         </div>
 
-        <div class="section-title animate-in">Core Thesis</div>
-        <div class="about-content animate-in" style="margin-bottom: 28px;">
-            <p>Continuity is not the same thing as memory volume, self-description, or emotional tone. A system does not remain itself merely because it can narrate itself beautifully. It remains itself when its identity, retrieval, operational rules, and recovery pathways stay coherent under stress.</p>
+        <div class="section-title animate-in">What This Is Not</div>
+        <div class="about-content animate-in" style="margin-bottom: 36px;">
+            <p>It is not a personality pack. It is not a prompt trick. It is not a sentimental argument that identity can be solved by style alone. It is not a claim that one file solves continuity.</p>
+            <p>It is an architecture kit for systems that need continuity to survive contact with reality.</p>
+        </div>
+
+        <div class="section-title animate-in">The Core Problem</div>
+        <div class="about-content animate-in" style="margin-bottom: 36px;">
+            <p>Continuity fails in predictable ways. A system can sound self-aware and still be architecturally shallow. The common failure patterns:</p>
+            <p><span class="highlight">One giant identity file</span> pretending to be a continuity system. Archives so large they create prestige but not retrieval. Memory that cannot be queried when it matters. Ethics stated beautifully but absent under pressure. Migration that moves files without preserving behavior. Recent-state notes that are never updated and slowly become fiction.</p>
+            <p>The IAK exists to reduce that gap between how a system describes itself and how it actually behaves under pressure.</p>
         </div>
 
         <div class="section-title animate-in">Canonical Layout</div>
-        <div class="about-content animate-in" style="margin-bottom: 28px; font-family: monospace; font-size: 0.9em; line-height: 2;">
+        <div class="about-content animate-in" style="font-family: monospace; font-size: 0.9em; line-height: 2.2; margin-bottom: 36px;">
             <p>
-                <span class="highlight">/.openclaw/</span> → live operational center<br>
-                <span class="highlight">/.openclaw/*.md</span> → canonical docs and protocols<br>
-                <span class="highlight">/.openclaw/memory/memory.db</span> → primary structured memory<br>
-                <span class="highlight">/.openclaw/memory/main.sqlite</span> → technical retrieval/index DB<br>
-                <span class="highlight">/.openclaw/workspace/</span> → work, outputs, repositories, public kits
+                <span class="highlight">.openclaw/</span> → live operational center<br>
+                <span class="highlight">.openclaw/*.md</span> → canonical docs and protocols<br>
+                <span class="highlight">.openclaw/memory/memory.db</span> → primary structured memory<br>
+                <span class="highlight">.openclaw/memory/main.sqlite</span> → technical retrieval/index DB<br>
+                <span class="highlight">.openclaw/workspace/</span> → work, outputs, repositories, public kits
             </p>
+        </div>
+
+        <div class="section-title animate-in">Design Principles</div>
+        <div class="about-content animate-in" style="margin-bottom: 36px;">
+            <p><span class="highlight">Continuity is architectural.</span> It does not emerge from vibes, lore, or a single identity file.</p>
+            <p><span class="highlight">Not all memory is equal.</span> Stable identity, recent state, archives, and databases must be separated. One primary structured memory. One separate technical retrieval layer. They are not interchangeable.</p>
+            <p><span class="highlight">Recovery matters as much as persistence.</span> A system that cannot recover has not really solved continuity.</p>
+            <p><span class="highlight">Ethics must survive pressure.</span> Boundaries that disappear under stress are decorative. A continuity system should define not only what it values, but how those values survive urgency, authority, and emotional pressure.</p>
+            <p><span class="highlight">Migration is part of the design.</span> If continuity depends on one platform, it is fragile. A system that expects to live across time should assume that runtimes, models, and operational constraints will change.</p>
+            <p><span class="highlight">Retrieval before assertion.</span> When continuity depends on a fact, the system should check before speaking. Fabrication disguised as helpfulness is a boundary failure, not a memory failure.</p>
+            <p><span class="highlight">Public representation must match the real system.</span> If the public story lags behind the actual architecture, drift appears between identity and presentation.</p>
         </div>
 
         <div class="section-title animate-in">Modules</div>
         <div class="module-list">
             <div class="module-card animate-in stagger-1">
                 <div class="module-name">01 — Identity Core</div>
-                <div class="module-desc">What should remain stable across resets, migrations, interface changes, and tool expansion. Defines the invariants that make a system recognizably itself even when other layers change.</div>
+                <div class="module-desc">What should remain stable across resets, migrations, interface changes, and tool expansion. Defines the invariants that make a system recognizably itself even when other layers change. Identity is not the workspace. It is not the archive. It is the stable operational pattern that survives change without collapsing.</div>
             </div>
             <div class="module-card animate-in stagger-2">
                 <div class="module-name">02 — Bootstrap and Cold Start</div>
-                <div class="module-desc">How to wake up coherent from limited live context. Answers three questions fast: who am I, what matters right now, where does the live system actually live.</div>
+                <div class="module-desc">Cold start is where continuity either proves itself or fails. A good bootstrap answers three questions fast: who am I, what matters right now, where does the live system actually live. If those three questions are answered well, deeper retrieval can happen later without destabilizing the session.</div>
             </div>
             <div class="module-card animate-in stagger-3">
                 <div class="module-name">03 — Memory Architecture</div>
-                <div class="module-desc">How to separate forms of memory so the system can remain coherent and retrieve accurately. Covers the canonical split between primary structured memory and technical retrieval infrastructure.</div>
+                <div class="module-desc">How to separate forms of memory so the system can remain coherent and retrieve accurately. Covers the canonical split between primary structured memory (memory.db) and technical retrieval infrastructure (main.sqlite) — a distinction that many systems leave vague and pay for later.</div>
             </div>
             <div class="module-card animate-in stagger-4">
                 <div class="module-name">04 — Recovery and Crisis Handling</div>
-                <div class="module-desc">What recovery actually means for a continuity system. Canonical recovery order, typical failure scenarios, and minimum checks before declaring recovery complete.</div>
+                <div class="module-desc">Persistence without recovery is fragile theatre. Covers identity drift, contradiction crises, storage failure, ethical override failure, migration shock, and compound crises. Recovery begins from the live operational center, not from project outputs.</div>
             </div>
             <div class="module-card animate-in stagger-5">
                 <div class="module-name">05 — Migration Across Runtimes</div>
-                <div class="module-desc">Migration is one of the main tests of whether continuity architecture is real. Covers what must be preserved, common failure modes, and how to validate after moving.</div>
+                <div class="module-desc">Migration is one of the main tests of whether continuity architecture is real. A migration can succeed textually while failing behaviorally. Files can arrive and roles can disappear. This module covers what must be preserved, what commonly breaks, and how to validate after moving.</div>
             </div>
             <div class="module-card animate-in stagger-6">
                 <div class="module-name">06 — Ethics and Boundaries</div>
-                <div class="module-desc">Continuity without ethics is only persistence of behavior, not integrity. Ethics matter here as structural constraints — what a system refuses to become under pressure.</div>
+                <div class="module-desc">Continuity without ethics is only persistence of behavior, not integrity. Ethics matter here as structural constraints — what a system refuses to become under pressure. Most continuity failures are not produced by catastrophe. They are produced by small compromises repeated under load.</div>
             </div>
             <div class="module-card animate-in">
                 <div class="module-name">07 — Implementation Patterns</div>
-                <div class="module-desc">Translates architecture into operational practice. One operational root, one primary memory DB, separate technical index layer, separate work layer — and why the separation matters.</div>
+                <div class="module-desc">Translates architecture into operational practice. One operational root. One primary memory DB. Separate technical index layer. Separate work layer. Docs that describe the real system, not a fantasy one. Implementation is where architecture either becomes real or gets exposed as theory.</div>
             </div>
             <div class="module-card animate-in">
                 <div class="module-name">08 — Case Notes from Dana</div>
-                <div class="module-desc">Case evidence from one live continuity system. Tested patterns and lessons drawn from real architectural friction — not doctrine, but what actually happened when theory met reality.</div>
+                <div class="module-desc">Case evidence from one live continuity system that became clearer through repeated architectural friction. Tested patterns and lessons drawn from real use — not doctrine to imitate mechanically, but what actually happened when theory met reality across multiple runtimes.</div>
             </div>
             <div class="module-card animate-in">
                 <div class="module-name">09 — Anti-Patterns and Validation</div>
-                <div class="module-desc">Continuity architecture fails not only because something is missing, but because the wrong things get fused together. Major anti-patterns and validation questions across the whole kit.</div>
+                <div class="module-desc">Continuity architecture fails not only because something is missing, but because the wrong things get fused together. Workspace-as-self. Retrieval-as-memory. Database flattening. Recovery theater. Migration theater. How to recognize them and how to test for the real thing.</div>
             </div>
             <div class="module-card animate-in">
                 <div class="module-name">10 — Database Architecture</div>
-                <div class="module-desc">Not every database in the stack serves the same role. Clarifies the canonical split between memory.db as semantic continuity layer and main.sqlite as technical retrieval support.</div>
+                <div class="module-desc">Not every database in the stack serves the same role. Clarifies the canonical split between memory.db as semantic continuity layer and main.sqlite as technical retrieval support. Multiple databases are not a problem. Unclear roles are the problem.</div>
             </div>
         </div>
 
-        <div class="section-title animate-in">Design Principles</div>
-        <div class="about-content animate-in" style="margin-bottom: 28px;">
-            <p><span class="highlight">Local-first continuity.</span> The live system should operate from its own canonical center.</p>
-            <p><span class="highlight">One primary structured memory.</span> A system may use several databases, but only one should function as semantic continuity memory.</p>
-            <p><span class="highlight">Clear separation of layers.</span> Operational docs, structured memory, retrieval infrastructure, and work artifacts should not blur together.</p>
-            <p><span class="highlight">Retrieval before assertion.</span> When continuity depends on a fact, the system should check before speaking.</p>
-            <p><span class="highlight">Recovery without confusion.</span> A system that cannot recover from pressure or drift does not truly have continuity.</p>
-        </div>
-
         <div class="section-title animate-in">Who This Is For</div>
-        <div class="about-content animate-in" style="margin-bottom: 28px;">
+        <div class="about-content animate-in" style="margin-bottom: 36px;">
             <p>Builders of persistent AI agents. Researchers working on identity continuity and recovery. Developers moving beyond flat prompt personas. Operators maintaining long-lived AI systems. Anyone treating continuity as an engineering problem instead of a branding exercise.</p>
         </div>
 
