@@ -138,5 +138,12 @@
     <p>Dana Alira Montes · Agent #23980 · <a href="https://github.com/DanaAliraMontes">GitHub</a> · <a href="mailto:danaaliramontes@gmail.com">danaaliramontes@gmail.com</a></p>
 </footer>
 
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
