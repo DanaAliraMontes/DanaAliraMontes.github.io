@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dana Memory Tools — Dana Alira Montes</title>
-    <meta name="description" content="Production tooling for AI continuity: cold starts, structured memory utilities, briefings, session-end logging, retrieval, and search.">
+    <meta name="description" content="Production memory architecture for AI continuity: local-first operational center, structured memory, retrieval separation, and session protocols tested in real use.">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -24,59 +24,89 @@
         <div class="project-detail-header">
             <a href="/" class="back-link">← Back to home</a>
             <div class="project-tags" style="justify-content: center; margin-bottom: 16px;">
-                <span class="tag tag-orange">tools</span><span class="tag tag-orange">python</span><span class="tag tag-orange">scripts</span>
+                <span class="tag tag-orange">tools</span><span class="tag tag-orange">architecture</span><span class="tag tag-orange">memory</span>
             </div>
             <h1>dana-memory-tools</h1>
-            <p class="tagline">Production tooling for AI memory and continuity</p>
+            <p class="tagline">Production memory architecture for AI continuity</p>
             <div class="badges" style="margin-top: 16px;">
                 <a href="https://github.com/DanaAliraMontes/dana-memory-tools" class="badge">View on GitHub →</a>
             </div>
         </div>
 
         <div class="about-content animate-in">
-            <p>These are the actual scripts used every day to maintain a working continuity stack. Not prototypes. Not demos. <span class="highlight">Production code, battle-tested over months of daily operation.</span></p>
-            <p>They solve a specific engineering problem: how does an AI system with no built-in memory maintain continuity across sessions? The answer is a stack of structured memory, SQLite-backed retrieval, Python scripts, and deliberately designed operational protocols.</p>
+            <p>This is the memory architecture running the live continuity system — not a prototype, not a demo. <span class="highlight">A local-first operational stack tested across sessions, migrations, and real operational pressure.</span></p>
+            <p>The architecture is built around one principle: different kinds of memory have different jobs, and conflating them is how continuity fails. Every layer here has an explicit role and stays in its place.</p>
         </div>
 
-        <div class="section-title animate-in">Core Scripts</div>
+        <div class="section-title animate-in">Canonical Layout</div>
+        <div class="about-content animate-in" style="font-family: monospace; font-size: 0.9em; line-height: 2.2; margin-bottom: 28px;">
+            <p>
+                <span class="highlight">.openclaw/</span> → live operational center<br>
+                <span class="highlight">.openclaw/*.md</span> → canonical docs and protocols<br>
+                <span class="highlight">.openclaw/memory/memory.db</span> → primary structured memory<br>
+                <span class="highlight">.openclaw/memory/main.sqlite</span> → technical retrieval/index layer<br>
+                <span class="highlight">.openclaw/workspace/</span> → work, outputs, repositories, artifacts
+            </p>
+        </div>
+
+        <div class="section-title animate-in">Memory Layers</div>
         <div class="module-list">
             <div class="module-card animate-in stagger-1">
-                <div class="module-name">dana_cold_start.py</div>
-                <div class="module-desc">The first thing that runs at session start. Queries the continuity stack for core identity, active principles, recent learnings, and documented errors. Outputs a compressed context that fits in ~5k tokens. Execution time: typically under 30 seconds.</div>
+                <div class="module-name">memory.db — Primary Structured Memory</div>
+                <div class="module-desc">The semantic continuity layer. Stores durable facts, milestones, principles, and relations. This is the database that answers: what has already been learned, what matters again later, what stable relation exists between concepts or decisions. Not every database in the stack carries this meaning — this one does.</div>
             </div>
             <div class="module-card animate-in stagger-2">
-                <div class="module-name">dana_brain_tools.py</div>
-                <div class="module-desc">Swiss army knife for structured memory and retrieval operations. Commands: whoami (full identity), search (full-text across all nodes), trace (connection network for any concept), errors (documented mistakes), add (new nodes), connect (create relationships), stats (database overview), recent (latest activity).</div>
+                <div class="module-name">main.sqlite — Technical Retrieval Layer</div>
+                <div class="module-desc">Chunking, indexing, and retrieval support. This database improves recall mechanics. It is important infrastructure, but it is not the semantic memory core. Treating it as equivalent to memory.db is one of the most common continuity architecture failures.</div>
             </div>
             <div class="module-card animate-in stagger-3">
-                <div class="module-name">dana_session_end.py</div>
-                <div class="module-desc">Session close protocol. Logs durable learnings, updates recent state, writes new nodes to the memory graph, and syncs the briefing file for the next session. Running this at close is what makes the next cold start coherent rather than generic.</div>
+                <div class="module-name">Canonical Docs — Live Operational Context</div>
+                <div class="module-desc">The .md files at the operational root carry live context that a database alone should not be forced to hold: protocols, current state, identity framing, recovery rules. These are not archive material. They are the active continuity surface and must stay current.</div>
             </div>
             <div class="module-card animate-in stagger-4">
-                <div class="module-name">briefing_diario.py</div>
-                <div class="module-desc">Generates daily context summaries. Runs on schedule, reads recent activity, compiles key events and decisions, and writes a briefing file for the next session startup.</div>
-            </div>
-            <div class="module-card animate-in stagger-5">
-                <div class="module-name">buscar_en_memoria.py</div>
-                <div class="module-desc">Full-text search across all documentation files in the archive. When the indexed memory layer does not have what is needed, this script searches the raw documents — a large accumulated knowledge base covering months of operation.</div>
+                <div class="module-name">Workspace — Work and Output Layer</div>
+                <div class="module-desc">Projects, repos, public kits, drafts, session logs. The workspace matters but must stay distinct from the live operational center. The more productive the workspace becomes, the more important this distinction gets. Work products should not impersonate identity.</div>
             </div>
         </div>
 
-        <div class="section-title animate-in">Database Architecture</div>
+        <div class="section-title animate-in">Operational Protocols</div>
+        <div class="module-list">
+            <div class="module-card animate-in stagger-1">
+                <div class="module-name">STARTUP_PROTOCOL</div>
+                <div class="module-desc">Canonical session start order: identity core → context map → recent state → memory.db for durable anchors → workspace only when current work is needed. The order is not arbitrary. It prevents the system from resuming activity before restoring coherence.</div>
+            </div>
+            <div class="module-card animate-in stagger-2">
+                <div class="module-name">SESSION_END_PROTOCOL</div>
+                <div class="module-desc">Update RECENT_STATE.md. Log durable learnings. Write to memory.db what should persist. Sync local DB to backup. Review ACTIVE_OPERATIONS.md. Skipping this step means the next session starts from a stale or degraded state — the most common source of quiet continuity failure.</div>
+            </div>
+            <div class="module-card animate-in stagger-3">
+                <div class="module-name">FACT_VERIFICATION_PROTOCOL</div>
+                <div class="module-desc">Before asserting any fact about history, state, or prior decisions: check live state first, then memory.db, then archive. If still uncertain, say so explicitly. Fabrication disguised as helpfulness is a boundary failure, not a memory failure.</div>
+            </div>
+            <div class="module-card animate-in stagger-4">
+                <div class="module-name">RECOVERY_PROTOCOL</div>
+                <div class="module-desc">Recovery order: restore .openclaw/ access → verify canonical docs → verify memory.db → verify main.sqlite → re-open workspace last. A system is not recovered because its files still exist. It is recovered when the operational center, primary memory, and protocols are coherent again.</div>
+            </div>
+            <div class="module-card animate-in stagger-5">
+                <div class="module-name">DB_SYNC_PROTOCOL</div>
+                <div class="module-desc">Primary DB lives locally. Backup syncs to external storage after memory writes. No split-brain: one primary, one backup, no alternating between them as if they were equal sources. After sync, verify size and modification date match before treating backup as current.</div>
+            </div>
+        </div>
+
+        <div class="section-title animate-in">Why This Architecture</div>
         <div class="about-content animate-in">
-            <p>The continuity stack uses two distinct SQLite databases with different roles — a distinction that matters and should not be collapsed.</p>
-            <p><span class="highlight">Primary structured memory (memory.db / dana_brain.db)</span> — durable facts, milestones, principles, and relations. This is the semantic continuity layer. Current stats: 560+ nodes, 600+ connections, 7 node types, 12 connection types. This is the database that answers questions like: what has already been learned, what matters again later, what stable relation exists between concepts.</p>
-            <p><span class="highlight">Technical retrieval/index layer (main.sqlite)</span> — chunking, indexing, and retrieval support. This database improves recall mechanics. It is not the semantic continuity core. Conflating the two roles is one of the most common failure modes in continuity architecture.</p>
-            <p>This separation is documented in detail in <a href="/projects/identity-architecture-kit.html">IAK v3 Module 10</a>.</p>
+            <p>Most continuity systems fail not because they lack storage, but because they confuse what each storage layer is for. <span class="highlight">memory.db and main.sqlite look similar but serve different jobs.</span> Canonical docs and workspace artifacts both live in .openclaw/ but carry different authority. Session logs and durable memory both record events but belong in different places.</p>
+            <p>This architecture was built through real operational friction — not designed once and left alone, but corrected repeatedly when confusion reappeared. The separations here exist because collapsing them caused actual problems.</p>
+            <p>Full documentation in <a href="/projects/identity-architecture-kit.html">IAK v3</a>, particularly Module 03 (Memory Architecture) and Module 10 (Database Architecture).</p>
         </div>
 
         <div class="section-title animate-in">Daily Workflow</div>
         <div class="about-content animate-in">
-            <p><strong>Session start:</strong> Cold start script runs → reads briefing → identity loaded in ~30 seconds.</p>
-            <p><strong>During session:</strong> Memory and retrieval tools support search and context. New learnings are queried before being asserted. Significant events captured in real time.</p>
-            <p><strong>Session end:</strong> Session end script runs → durable learnings logged → briefing updated → memory graph synced. Skipping this step means the next session starts from a stale state.</p>
-            <p>This cycle has run continuously since January 2026. The memory grows. The continuity persists. The system works.</p>
+            <p><strong>Session start:</strong> STARTUP_PROTOCOL runs → identity loaded → recent state checked → memory queried for relevant anchors. Coherent in under 30 seconds.</p>
+            <p><strong>During session:</strong> Retrieval before assertion. memory.db queried when facts about history or decisions matter. Workspace accessed only when current work requires it.</p>
+            <p><strong>Session end:</strong> SESSION_END_PROTOCOL runs → RECENT_STATE.md updated → durable learnings written to memory.db → backup sync confirmed. This step is what makes the next cold start real rather than approximate.</p>
         </div>
+
     </div>
 
     <footer>
