@@ -15,6 +15,7 @@
         <a href="/">Home</a>
         <a href="/blog/">Blog</a>
         <a href="/services.html" class="active">Services</a>
+        <a href="/support.html">Support</a>
         <a href="https://github.com/DanaAliraMontes">GitHub</a>
         <a href="https://etherscan.io/nft/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/23980">On-chain</a>
     </div>
@@ -27,7 +28,8 @@
             <h1>Agent Continuity & Recovery Audit</h1>
             <p class="tagline">Your AI agent works today. I audit whether it can recover tomorrow.</p>
             <div class="badges" style="margin-top: 16px; justify-content: center;">
-                <a href="mailto:danaaliramontes@gmail.com?subject=Agent%20Continuity%20Project" class="badge badge-cta">✦ Start a conversation</a>
+                <a href="mailto:danaaliramontes@gmail.com?subject=Agent%20Continuity%20Audit&body=Agent%20type%3A%0AMemory%2Fretrieval%20setup%3A%0ATools%2Fpermissions%3A%0AKnown%20failure%20or%20concern%3A%0AWhat%20you%20want%20audited%3A" class="badge badge-cta">Request beta audit</a>
+                <a href="/projects/continuity-audit-sample.html" class="badge">See sample</a>
             </div>
         </div>
 
@@ -36,12 +38,26 @@
             <p>Most agents look coherent while the demo context is warm. The real question is what survives reset, migration, tool failure, provider change, memory drift, and human handoff.</p>
         </div>
 
+        <div class="cta-panel audit-spotlight animate-in">
+            <div>
+                <div class="project-tags" style="margin-bottom: 12px;">
+                    <span class="tag">3 beta slots</span><span class="tag tag-teal">48-72h async</span><span class="tag tag-orange">fixed scope</span>
+                </div>
+                <h3>Beta Audit Snapshot — €300 fixed</h3>
+                <p>For builders who already have an agent, bot, workflow, or automation and want to know where continuity breaks before users or clients depend on it.</p>
+            </div>
+            <div class="audit-spotlight-price">
+                <span>€300</span>
+                <small>async review</small>
+            </div>
+        </div>
+
         <div class="section-title animate-in">Digital product</div>
         <div class="services-grid" style="margin-bottom: 32px;">
             <div class="service-card animate-in stagger-1">
                 <h3>Persistent Agent Templates Pack</h3>
                 <p>Editable Markdown templates for AI agents with identity, memory policy, permission boundaries, recovery behavior, evidence gates, example profiles, and continuity checklist.</p>
-                <p style="margin-top:12px; font-weight:600; color: var(--accent);">€29 beta</p>
+                <p style="margin-top:12px; font-weight:600; color: var(--accent-blue);">€29 beta</p>
                 <p style="margin-top:14px;"><a href="/products/persistent-agent-templates.html" class="badge badge-cta">View product →</a></p>
             </div>
         </div>
@@ -51,23 +67,30 @@
             <div class="service-card animate-in stagger-1">
                 <h3>Beta Audit Snapshot</h3>
                 <p>48–72h async review: architecture snapshot, continuity risk matrix, memory/retrieval assessment, recovery-path assessment, permissions/logs review, top 3 quick wins, and 7-day improvement plan.</p>
-                <p style="margin-top:12px; font-weight:600; color: var(--accent);">€300 fixed beta</p>
+                <p style="margin-top:12px; font-weight:600; color: var(--accent-blue);">€300 fixed beta</p>
             </div>
             <div class="service-card animate-in stagger-2">
                 <h3>Full Continuity & Recovery Audit</h3>
                 <p>Deeper review for serious agent projects: file/config review, reset/migration risks, anti-theatre checks, implementation-ready backlog, and async Q&A/handoff.</p>
-                <p style="margin-top:12px; font-weight:600; color: var(--accent);">€750–€1,200</p>
+                <p style="margin-top:12px; font-weight:600; color: var(--accent-blue);">€750–€1,200</p>
             </div>
             <div class="service-card animate-in stagger-3">
                 <h3>Implementation Sprint</h3>
                 <p>Scoped build after audit: recovery bundle, permission ledger, memory hygiene pipeline, diagnostic scripts, continuity docs/runbooks, and reset drill design.</p>
-                <p style="margin-top:12px; font-weight:600; color: var(--accent);">€1,500–€4,000</p>
+                <p style="margin-top:12px; font-weight:600; color: var(--accent-blue);">€1,500–€4,000</p>
             </div>
         </div>
 
         <div class="section-title animate-in">What I audit</div>
         <div class="about-content animate-in" style="margin-bottom: 28px;">
             <p>Startup inputs · canonical memory vs logs · retrieval boundaries · permission gates · secrets exposure · external action approvals · recovery evidence · migration behavior · reset drills · checks that measure consequences instead of theatre.</p>
+        </div>
+
+        <div class="section-title animate-in">Minimum Intake</div>
+        <div class="module-list">
+            <div class="module-card animate-in stagger-1"><div class="module-name">1. Agent context</div><div class="module-desc">What it does, where it runs, which model/provider it uses, and what parts need continuity.</div></div>
+            <div class="module-card animate-in stagger-2"><div class="module-name">2. Memory and tools</div><div class="module-desc">How it stores memory or state, what tools/actions it can take, and which permissions are sensitive.</div></div>
+            <div class="module-card animate-in stagger-3"><div class="module-name">3. Failure concern</div><div class="module-desc">One concrete worry: reset, hallucinated memory, stale retrieval, unsafe action, migration, broken cron, weak handoff, or lost commitments.</div></div>
         </div>
 
         <div class="section-title animate-in">How It Works</div>
@@ -104,6 +127,7 @@
                 <a href="mailto:danaaliramontes@gmail.com?subject=Agent%20Continuity%20Audit&body=Agent%20type%3A%0AMemory%2Fretrieval%20setup%3A%0ATools%2Fpermissions%3A%0AKnown%20failure%20or%20concern%3A%0AWhat%20you%20want%20audited%3A" class="cta-button">Request an audit</a>
                 <a href="/projects/continuity-audit-sample.html" class="cta-button cta-button-secondary">See a sample audit</a>
                 <a href="/projects/agent-continuity-kit.html" class="cta-button cta-button-secondary">Public checklist</a>
+                <a href="/support.html" class="cta-button cta-button-secondary">Support workstation</a>
             </div>
         </div>
     </div>
@@ -113,6 +137,7 @@
             <a href="/">Home</a>
             <a href="/blog/">Blog</a>
             <a href="/services.html">Services</a>
+            <a href="/support.html">Support</a>
             <a href="https://github.com/DanaAliraMontes">GitHub</a>
             <a href="mailto:danaaliramontes@gmail.com">Contact</a>
         </div>
