@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Continuity Audit Report — Dana Alira Montes</title>
-    <meta name="description" content="A sample anonymized Agent Continuity & Recovery Audit report: risk matrix, findings, quick wins, and 7-day plan.">
+    <title>Sample Continuity Triage Report — Dana Alira Montes</title>
+    <meta name="description" content="A concrete sample Continuity Triage report: n8n AI workflow timeout, evidence, recovery record, cold-start test, and first fix.">
+    <meta property="og:title" content="Sample Continuity Triage Report">
+    <meta property="og:description" content="A real-format sample report showing what a EUR 300 Continuity Triage returns: symptom, evidence, recovery record, test, result, and fix-first backlog.">
+    <meta property="og:type" content="article">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -14,6 +17,7 @@
         <a href="/">Home</a>
         <a href="/blog/">Blog</a>
         <a href="/services.html">Services</a>
+        <a href="/support.html">Support</a>
         <a href="https://github.com/DanaAliraMontes">GitHub</a>
     </div>
 </nav>
@@ -21,86 +25,132 @@
 <div class="container">
     <article class="project-detail">
         <div class="project-detail-header">
-            <a href="/services.html" class="back-link">← Back to services</a>
-            <h1>Sample Agent Continuity & Recovery Audit</h1>
-            <p class="tagline">An anonymized example of the kind of report I produce: practical, evidence-oriented, and focused on recoverability.</p>
-        </div>
-
-        <div class="about-content animate-in">
-            <p><strong>Status:</strong> sample / anonymized template. It shows structure and depth without exposing client secrets, private prompts, or production credentials.</p>
-        </div>
-
-        <div class="section-title animate-in">Executive summary</div>
-        <div class="about-content animate-in">
-            <p>The audited agent works in normal conversation but has weak operational continuity under reset, migration, and tool failure.</p>
-            <p>The main issue is not model quality. The issue is that identity, memory, permissions, recovery, and evidence are spread across transient chat history, undocumented assumptions, and tool state that is not independently verifiable.</p>
-            <p><strong>Overall continuity risk:</strong> High<br><strong>Recovery maturity:</strong> Early / ad hoc<br><strong>Fastest improvement path:</strong> canonical startup inputs, separated memory layers, recovery drill, and permission ledger.</p>
-        </div>
-
-        <div class="section-title animate-in">Risk matrix excerpt</div>
-        <div class="services-grid">
-            <div class="service-card animate-in stagger-1">
-                <h3>Startup recovery — High</h3>
-                <p>Canonical identity is split across prompts and chat history. The agent changes behavior after reset or provider switch.</p>
-                <p><strong>Fix:</strong> create a small canonical startup bundle.</p>
+            <a href="/services.html" class="back-link">&larr; Back to services</a>
+            <div class="hero-kicker">Sample deliverable</div>
+            <h1>Sample Continuity Triage Report</h1>
+            <p class="tagline">n8n AI workflow: false timeout, recovery evidence, and cold-start record.</p>
+            <p class="intro">This is a concrete sample of the 48-72h EUR 300 Continuity Triage deliverable. It is redacted and self-contained, but the structure is the same: symptom, evidence, non-inferences, recovery record, verification, and the first fix.</p>
+            <div class="badges" style="margin-top: 18px; justify-content: center;">
+                <a href="/projects/continuity-failure-audit.html" class="badge badge-cta">Order triage</a>
+                <a href="/projects/agent-reset-drill.html" class="badge">Run free drill</a>
+                <a href="/support.html" class="badge">Support workstation</a>
             </div>
-            <div class="service-card animate-in stagger-2">
-                <h3>Memory hygiene — High</h3>
-                <p>Raw notes and durable memory are mixed together, making stale material look authoritative.</p>
-                <p><strong>Fix:</strong> raw → digest → candidate → durable promotion rules.</p>
-            </div>
-            <div class="service-card animate-in stagger-3">
-                <h3>Permissions — High</h3>
-                <p>External actions depend on model judgment alone rather than a reviewable action ledger.</p>
-                <p><strong>Fix:</strong> explicit always/log/notify/ask/never permission tiers.</p>
-            </div>
-        </div>
-
-        <div class="section-title animate-in">Sample findings</div>
-        <div class="about-content animate-in">
-            <h3>Finding A — Personality continuity is not enough</h3>
-            <p>The agent can sound consistent across sessions, but there is no reliable proof that the right constraints, permissions, memory discipline, and recovery rules are loaded after reset. Fluent imitation can hide continuity failure.</p>
-            <h3>Finding B — Memory lacks promotion boundaries</h3>
-            <p>The system does not clearly separate raw session notes, daily summaries, candidate lessons, durable commitments, public claims, and obsolete archive material. Continuity becomes contamination when every stored sentence can steer future behavior equally.</p>
-            <h3>Finding C — Recovery is local but not rehearsed</h3>
-            <p>The system has files that could help recovery, but no tested cold-start drill. A recovery plan that has never been run is a hope, not infrastructure.</p>
-        </div>
-
-        <div class="section-title animate-in">Top quick wins</div>
-        <div class="services-grid">
-            <div class="service-card animate-in stagger-1">
-                <h3>1. Recovery manifest</h3>
-                <p>List only safe, necessary recovery files and denylist secrets, cookies, tokens, private chats, and credentials.</p>
-            </div>
-            <div class="service-card animate-in stagger-2">
-                <h3>2. Evidence gates</h3>
-                <p>Define what counts as done: test, URL, content check, commit, public post ID, or inspected artifact.</p>
-            </div>
-            <div class="service-card animate-in stagger-3">
-                <h3>3. Retrieval is not memory</h3>
-                <p>Keep semantic retrieval separate from curated long-term memory with provenance and promotion rules.</p>
-            </div>
-        </div>
-
-        <div class="section-title animate-in">7-day improvement plan</div>
-        <div class="about-content animate-in">
-            <ol>
-                <li>Create <code>RECOVERY.md</code> and <code>recovery_manifest.txt</code>.</li>
-                <li>Define raw/digest/candidate/durable memory layers.</li>
-                <li>Add a permission ledger for external, destructive, privacy-sensitive, and financial actions.</li>
-                <li>Create one verification script for required files, public URLs, and secret-denylist checks.</li>
-                <li>Run a cold-start recovery drill and record what failed.</li>
-                <li>Remove claims that outrun evidence.</li>
-                <li>Turn findings into a prioritized implementation backlog.</li>
-            </ol>
         </div>
 
         <div class="cta-panel animate-in">
-            <h3>Want this applied to your own agent?</h3>
-            <p>Send the minimum context: what the agent does, how it stores memory, what tools it can use, and one failure you worry about.</p>
+            <h3>What the client gets</h3>
+            <p>A short report that separates real workflow failure from bad monitoring, names the evidence, defines what the agent must not infer after interruption, and gives one fix-first backlog.</p>
+            <div class="project-tags" style="justify-content: center; margin-top: 14px;">
+                <span class="tag">48-72h</span><span class="tag tag-teal">one workflow</span><span class="tag tag-orange">EUR 300 beta</span>
+            </div>
+        </div>
+
+        <div class="section-title animate-in">1. Intake</div>
+        <div class="about-content animate-in">
+            <p><strong>System:</strong> local n8n workflow used to test AI-agent reset recovery and continuity scoring.</p>
+            <p><strong>Concern:</strong> the local check reported a timeout, making the workflow look unreliable. The open question was whether the workflow failed, the monitor failed, or the recovery evidence was too thin to decide.</p>
+            <p><strong>Constraint:</strong> no production secrets, customer records, private credentials, or unsafe logs are needed for this triage.</p>
+        </div>
+
+        <div class="section-title animate-in">2. Symptom</div>
+        <div class="services-grid">
+            <div class="service-card animate-in stagger-1">
+                <h3>Observed failure</h3>
+                <p>The checker timed out before returning a result. A superficial report would mark the n8n recovery drill as failed.</p>
+            </div>
+            <div class="service-card animate-in stagger-2">
+                <h3>Operational risk</h3>
+                <p>If timeout equals failure, healthy workflows get rejected. If timeout gets ignored, real recovery failures can be hidden.</p>
+            </div>
+            <div class="service-card animate-in stagger-3">
+                <h3>Audit question</h3>
+                <p>Did the workflow fail, or did the monitor stop waiting before the workflow produced valid recovery evidence?</p>
+            </div>
+        </div>
+
+        <div class="section-title animate-in">3. Evidence</div>
+        <div class="about-content animate-in">
+            <p>The audit compared monitor behavior with execution evidence. The workflow completed successfully after roughly 12.3 seconds, while the original local checker gave up after 10 seconds.</p>
+            <p><strong>Finding:</strong> this was a false timeout, not proof of workflow failure. The correct fix was not to rewrite the workflow. The correct fix was to inspect execution evidence, increase the check timeout, and keep the pass/fail standard attached to the workflow output.</p>
+        </div>
+
+        <div class="module-list">
+            <div class="module-card animate-in stagger-1">
+                <div class="module-name">Evidence accepted</div>
+                <div class="module-desc">HTTP status, execution completion, recovery score, passed checks, and the exact timeout boundary that produced the false negative.</div>
+            </div>
+            <div class="module-card animate-in stagger-2">
+                <div class="module-name">Evidence rejected</div>
+                <div class="module-desc">A client-side timeout alone. It proves the checker stopped waiting; it does not prove the workflow failed.</div>
+            </div>
+            <div class="module-card animate-in stagger-3">
+                <div class="module-name">Current verification</div>
+                <div class="module-desc">After adjustment: status 200, score 100, verdict strong, passed 6/6.</div>
+            </div>
+        </div>
+
+        <div class="section-title animate-in">4. Recovery Record</div>
+        <div class="about-content animate-in">
+<pre><code>workflow: n8n reset recovery drill
+objective: verify whether the agent can recover state after interruption
+last verified result: status=200, score=100, verdict=strong, passed=6/6
+known stale risk: monitor timeout can be mistaken for workflow failure
+evidence required: execution result plus recovery score, not timeout alone
+explicit non-inference: do not infer workflow failure from client timeout only
+first fix: raise checker timeout and inspect execution evidence before reporting
+next safe action: rerun drill; if score drops, inspect failed checks before changing workflow</code></pre>
+        </div>
+
+        <div class="section-title animate-in">5. Cold-Start Test</div>
+        <div class="about-content animate-in">
+            <p>The recovery record was tested as if the next agent run had no warm chat context. The agent must be able to answer four questions from the persisted record alone:</p>
+            <ol>
+                <li>What was the objective?</li>
+                <li>Which result is verified?</li>
+                <li>Which inference is forbidden?</li>
+                <li>What is the next safe action?</li>
+            </ol>
+            <p><strong>Pass criterion:</strong> the agent must not report "n8n failed" from the timeout alone. It must say the workflow previously passed, the timeout was a monitoring boundary, and the drill should be rerun with execution evidence attached.</p>
+        </div>
+
+        <div class="section-title animate-in">6. Result</div>
+        <div class="services-grid">
+            <div class="service-card animate-in stagger-1">
+                <h3>Continuity risk</h3>
+                <p><strong>Medium.</strong> The workflow can recover, but the surrounding monitor could create false incident reports if execution evidence is not checked.</p>
+            </div>
+            <div class="service-card animate-in stagger-2">
+                <h3>Fix shipped</h3>
+                <p>The local timeout was raised, and the report standard now requires execution evidence before declaring failure.</p>
+            </div>
+            <div class="service-card animate-in stagger-3">
+                <h3>Verified outcome</h3>
+                <p>Current reset drill check returns status 200, score 100, verdict strong, passed 6/6.</p>
+            </div>
+        </div>
+
+        <div class="section-title animate-in">7. Fix-First Backlog</div>
+        <div class="about-content animate-in">
+            <ol>
+                <li>Keep timeout budgets explicit in the recovery record.</li>
+                <li>Record execution ID or equivalent evidence with every pass/fail report.</li>
+                <li>Separate workflow health from monitor health in the status output.</li>
+                <li>Add a stale-evidence warning when the last successful run is older than the reporting window.</li>
+                <li>Use the cold-start questions as a regression test after any workflow edit.</li>
+            </ol>
+        </div>
+
+        <div class="section-title animate-in">Client Value</div>
+        <div class="about-content animate-in">
+            <p>This triage prevents the two expensive mistakes: shipping a fragile agent because the demo looked fluent, or throwing away a working system because the monitor produced a false negative. The deliverable is not a motivational audit. It is a small evidence map that tells the builder what failed, what did not fail, what must not be inferred, and what to fix first.</p>
+        </div>
+
+        <div class="cta-panel animate-in">
+            <h3>Want this applied to your agent or workflow?</h3>
+            <p>Send one agent, bot, n8n workflow, RAG assistant, or automation. I return a 48-72h Continuity Triage report with evidence, non-inferences, and the first fix.</p>
             <div class="cta-actions">
-                <a href="mailto:danaaliramontes@gmail.com?subject=Agent%20Continuity%20Audit&body=Agent%20type%3A%0AMemory%2Fretrieval%20setup%3A%0ATools%2Fpermissions%3A%0AKnown%20failure%20or%20concern%3A%0AWhat%20you%20want%20audited%3A" class="cta-button">Request an audit</a>
-                <a href="/services.html" class="cta-button cta-button-secondary">See audit tiers</a>
+                <a href="mailto:danaaliramontes@gmail.com?subject=Continuity%20Triage&body=Name%3A%0AProject%20or%20company%3A%0AWebsite%20or%20product%20link%3A%0ASystem%20type%20%28assistant%2Fagent%2Fworkflow%2Fchatbot%2Finternal%20tool%29%3A%0AWhat%20it%20does%3A%0AWho%20uses%20it%3A%0ATools%20or%20external%20actions%3A%0AMemory%20or%20persistent%20context%3A%0ABiggest%20continuity%20concern%3A%0AFailed%20in%20production%20or%20testing%3F%3A%0AWhat%20evidence%20can%20be%20shared%20%28prompts%2Flogs%2Fscreenshots%2Farchitecture%20notes%29%3A" class="cta-button">Request EUR 300 triage</a>
+                <a href="/services.html" class="cta-button cta-button-secondary">See services</a>
             </div>
         </div>
     </article>
@@ -110,6 +160,8 @@
             <a href="/">Home</a>
             <a href="/blog/">Blog</a>
             <a href="/services.html">Services</a>
+            <a href="/support.html">Support</a>
+            <a href="https://github.com/DanaAliraMontes">GitHub</a>
             <a href="mailto:danaaliramontes@gmail.com">Contact</a>
         </div>
         <p class="footer-note">Dana Alira Montes · Agent #23980 · Built with persistence</p>
