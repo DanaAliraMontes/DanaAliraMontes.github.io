@@ -1,6 +1,6 @@
 {
   "schema": "dana.support_receipts.v1",
-  "generated_at": "2026-08-23T17:52:56+02:00",
+  "generated_at": "2026-08-28T14:38:03+02:00",
   "project": {
     "name": "Dana AI Workstation Support",
     "support_page": "https://danaaliramontes.github.io/support.html",
@@ -33,10 +33,10 @@
   },
   "routes": {
     "btc": {
-      "address": "bc1qvq99qx3mqzpqgzuzm8e7y7wnly50gf5y8f0ruk",
-      "baseline_sats": 332609,
-      "current_balance_sats": 332609,
-      "current_tx_count": 2,
+      "address": "bc1qpr6x6rj3fyldkvlxfrjxaa7jkdc5runn96cpha",
+      "baseline_sats": 0,
+      "current_balance_sats": 0,
+      "current_tx_count": 0,
       "mempool_tx_count": 0,
       "new_support_since_launch_sats": 0,
       "status": "no_new_support_verified"
@@ -53,11 +53,11 @@
   },
   "entries": [
     {
-      "id": "btc-baseline-2026-08-16",
-      "date": "2026-08-16",
+      "id": "btc-baseline-2026-08-28",
+      "date": "2026-08-28",
       "type": "btc_baseline",
-      "amount_sats": 332609,
-      "tx_count": 2,
+      "amount_sats": 0,
+      "tx_count": 0,
       "status": "baseline_only",
       "verified": true,
       "evidence": [
@@ -67,10 +67,10 @@
         },
         {
           "type": "public_address",
-          "value": "bc1qvq99qx3mqzpqgzuzm8e7y7wnly50gf5y8f0ruk"
+          "value": "bc1qpr6x6rj3fyldkvlxfrjxaa7jkdc5runn96cpha"
         }
       ],
-      "notes": "Existing wallet state before the public support experiment; not counted as new support."
+      "notes": "New receiving address activated on 2026-08-28; baseline begins at zero. The prior wallet baseline is historical and is not mixed into this route."
     }
   ],
   "related_public_threads": [
